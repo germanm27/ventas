@@ -55,8 +55,8 @@ namespace Ventas
 
             foreach (var cliente in listadeclientes)
             {
-                MessageBox.Show(cliente.Id + "\n" +cliente.Nombre+ "\n"+cliente.Telefono+"\n"+
-                    cliente.Direccion+"\n"+cliente.Cuidad.Descripcion);
+                MessageBox.Show("Id: "+cliente.Id + "\nNombre: " +cliente.Nombre+ "\nTelefono: "+cliente.Telefono+
+                    "\nDireccion: "+cliente.Direccion+"\nCiudad: "+cliente.Cuidad.Descripcion);
             }
         }
     }
