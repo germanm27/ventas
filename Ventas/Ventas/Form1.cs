@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Ventas.BL;
 
 namespace Ventas
 {
@@ -15,11 +16,14 @@ namespace Ventas
         public Form1()
         {
             InitializeComponent();
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Piensa, Cree, Sueña");
+            var clientesBL = new ClientesBL();
+            listadeClientesBindingSource.DataSource =
+                clientesBL.ListadeClientes;
+
+            var ciudadBL = new CiudadBL();
+            listadeCiudadBindingSource.DataSource =
+                ciudadBL.ListadeCiudad;
         }
     }
 }
